@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>666</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 微软雅黑;
+    }
+
+    #div1 {
+      width: 200px;
+      height: 200px;
+      background: #ccc;
+    }
+  </style>
+  <script src="./js/vue.js"></script>
+  <script>
+    window.onload = function () {
+      let vm = new Vue({  //VM
+        el:'#app',
+        data:{  // M
+          arr:[
+            {title:'习近平出席金砖国家工商论坛开幕式并发表演讲',href:'#'},
+            {title:'这个项目全运会"最冷门" 全国只有不到250人在练',href:'http://www.baidu.com'},
+            {title:'战机刚起飞即撞鸟群 避开闹市实现载重超极限着陆',href:'#'},
+            {title:'外媒称新加坡华人拟重拾"母语"：汉语是自己的"根"',href:'#'},
+          ],
+        }
+      });
+    };
+  </script>
+</head>
+<body>
+
+<!--<div id="div1">{{数据名/变量名/属性名}}</div>-->
+
+<!--V-->
+<div id="app">
+  <ul>
+    <li v-for="(item,index) in arr">
+      <!--<a v-bind:href="item.href">{{item.title}}</a>-->
+      <a :href="item.href">{{item.title}}</a>
+    </li>
+  </ul>
+</div>
+
+
+</body>
+</html>
